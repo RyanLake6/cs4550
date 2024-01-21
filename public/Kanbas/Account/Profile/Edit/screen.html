@@ -10,19 +10,19 @@
                 <a href="/Kanbas/Account/Profile/screen.html"> Account</a>
               </li>
               <li>
-                <a href="/Kanbas/Dashboard/screen.html">Dashboard</a>
+                <a href="#">Dashboard</a>
               </li>
               <li>
                 <a href="/Kanbas/Courses/Home/screen.html">Courses</a>
               </li>
               <li>
-                <a href="/Kanbas/Calendar/index.html">Calendar</a>
+                <a href="#">Calendar</a>
               </li>
-              <li><a href="/Kanbas/Inbox/index.html">Inbox</a></li>
-              <li><a href="/Kanbas/History/index.html">History</a></li>
-              <li><a href="/Kanbas/Studio/index.html">Studio</a></li>
-              <li><a href="/Kanbas/Commons/index.html">Commons</a></li>
-              <li><a href="/Kanbas/Help/index.html">Help</a></li>
+              <li><a href="#">Inbox</a></li>
+              <li><a href="#">History</a></li>
+              <li><a href="#">Studio</a></li>
+              <li><a href="#">Commons</a></li>
+              <li><a href="#">Help</a></li>
             </ul>
           </td>
           <td valign="top">
@@ -71,10 +71,20 @@ Student, Web Dev Enthusiast, Senior</textarea
               </li>
             </ul>
 
-            Title URL
-            <br /><input value="Youtube" /> ->
-            <input value="https://www.youtube.com" /> <a href="#">Remove</a>
-            <br />
+            <table>
+              <tbody>
+                <tr style="text-align: center">
+                  <td><label for="youtube">Title</label></td>
+                  <td></td>
+                  <td><label for="url">URL</label></td>
+                </tr>
+                <td><input value="Youtube" id="youtube" /></td>
+                <td>-></td>
+                <td><input value="https://www.youtube.com" id="url" /></td>
+                <td><a href="#">Remove</a> <br /></td>
+                <tr></tr>
+              </tbody>
+            </table>
 
             <button>Add another link</button><br />
             <button>Cancel</button> <button>Save Profile</button> <br />
