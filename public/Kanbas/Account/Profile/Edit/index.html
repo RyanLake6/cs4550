@@ -31,23 +31,30 @@
       </li>
     </ul>
 
-    <table>
-      <tbody>
-        <tr style="text-align: center">
-          <td><label for="youtube">Title</label></td>
-          <td></td>
-          <td><label for="url">URL</label></td>
-        </tr>
-        <td><input value="Youtube" id="youtube" /></td>
-        <td>-></td>
-        <td><input value="https://www.youtube.com" id="url" /></td>
-        <td><a href="#">Remove</a> <br /></td>
-        <tr></tr>
-      </tbody>
-    </table>
+    <div style="display: flex; align-items: center">
+      <div style="text-align: center; margin-right: 10px">
+        <label for="youtube">Title</label>
+        <input value="Youtube" id="youtube" />
+      </div>
+      <div style="margin-right: 10px">-></div>
+      <div style="text-align: center; margin-right: 10px">
+        <label for="url">URL</label>
+        <input value="https://www.youtube.com" id="url" />
+      </div>
+      <div><a href="#">Remove</a> <br /></div>
+    </div>
 
     <button>Add another link</button><br />
-    <button>Cancel</button> <button>Save Profile</button> <br />
-    <button>Edit Profile</button> <button>Cancel Editing</button>
+    <button>Cancel</button>
+    <a href="/Kanbas/Account/Profile/screen.html"
+      ><button>Save Profile</button></a
+    >
+    <br />
+    <a href="/Kanbas/Account/Profile/Edit/screen.html"
+      ><button>Edit Profile</button></a
+    >
+    <a href="/Kanbas/Account/Profile/screen.html"
+      ><button>Cancel Editing</button></a
+    >
   </body>
 </html>
