@@ -1,0 +1,20 @@
+.wd-kanbas-navigation-bar {
+  background-color: white;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  width: 80px;
+}
+.wd-kanbas-navigation-bar li {
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 1em;
+  text-align: center;
+}
+.wd-kanbas-navigation-bar a {
+  color: red;
+  text-decoration: none;
+}
+.txt-black {
+  color: black;
+}
