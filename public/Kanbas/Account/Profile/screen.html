@@ -1,75 +1,78 @@
 <html>
-  <head> </head>
+  <head>
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+  </head>
   <body>
-    <table width="100%">
-      <tbody>
-        <tr>
-          <td valign="top">
-            <ul>
-              <li>
-                <a href="/Kanbas/Account/Profile/screen.html"> Account</a>
-              </li>
-              <li>
-                <a href="#">Dashboard</a>
-              </li>
-              <li>
-                <a href="/Kanbas/Courses/Home/screen.html">Courses</a>
-              </li>
-              <li>
-                <a href="#">Calendar</a>
-              </li>
-              <li><a href="#">Inbox</a></li>
-              <li><a href="#">History</a></li>
-              <li><a href="#">Studio</a></li>
-              <li><a href="#">Commons</a></li>
-              <li><a href="#">Help</a></li>
-            </ul>
-          </td>
-          <td valign="top">
-            <ul>
-              <li><a href="#">Notifications</a></li>
-              <li><a href="/Kanbas/Account/Profile/screen.html">Profile</a></li>
-              <li><a href="#">Files</a></li>
-              <li><a href="#">Settings</a></li>
-              <li><a href="#">ePortfolios</a></li>
-              <li><a href="#">Shared Content</a></li>
-              <li><a href="#">The Hub</a></li>
-              <li><a href="#">Quickly Course Tools</a></li>
-              <li><a href="#">Global Announcements</a></li>
-            </ul>
-          </td>
-          <td valign="top">
-            Ryan Lake's Profile
-            <hr />
-            <table>
-              <tbody>
-                <tr>
-                  <td valign="top">
-                    <h2>Ryan Lake</h2>
+    <div class="d-flex flex-row">
+      <div>
+        <ul class="wd-kanbas-navigation">
+          <li class="wd-active">
+            <a href="/Kanbas/Account/Profile/screen.html"> Account</a>
+          </li>
+          <li>
+            <a href="/Kanbas/Dashboard/screen.html"
+              ><i class="fa fa-gauge-high"></i>Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="/Kanbas/Courses/Home/screen.html">Courses</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-calendar-days"></i>Calendar</a>
+          </li>
+          <li><a href="#">Inbox</a></li>
+          <li><a href="#">History</a></li>
+          <li><a href="#">Studio</a></li>
+          <li><a href="#">Commons</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div>
+      <div class="d-flex">
+        <ul>
+          <li><a href="#">Notifications</a></li>
+          <li><a href="/Kanbas/Account/Profile/screen.html">Profile</a></li>
+          <li><a href="#">Files</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">ePortfolios</a></li>
+          <li><a href="#">Shared Content</a></li>
+          <li><a href="#">The Hub</a></li>
+          <li><a href="#">Quickly Course Tools</a></li>
+          <li><a href="#">Global Announcements</a></li>
+        </ul>
+      </div>
+      <div class="flex-fill">
+        Ryan Lake's Profile
+        <hr />
+        <div class="d-flex flex-row">
+          <div>
+            <h2>Ryan Lake</h2>
 
-                    <h3>Contact</h3>
-                    <p>
-                      No Registered services, you can add some on the
-                      <a href="#">settings</a> page
-                    </p>
+            <h3>Contact</h3>
+            <p>
+              No Registered services, you can add some on the
+              <a href="#">settings</a> page
+            </p>
 
-                    <h3>Biography</h3>
-                    <p>Student, Web Dev Enthusiast, Senior</p>
+            <h3>Biography</h3>
+            <p>Student, Web Dev Enthusiast, Senior</p>
 
-                    <h3>Links</h3>
-                    <p><a href="#">Youtube</a></p>
-                  </td>
-                  <td valign="top">
-                    <a href="/Kanbas/Account/Profile/Edit/screen.html">
-                      <button>Edit Profile</button>
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            <h3>Links</h3>
+            <p><a href="#">Youtube</a></p>
+          </div>
+          <div>
+            <a href="/Kanbas/Account/Profile/Edit/screen.html">
+              <button>Edit Profile</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
