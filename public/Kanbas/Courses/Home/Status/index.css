@@ -1,0 +1,21 @@
+.button-width {
+  width: 200px;
+}
+
+.view-calendar {
+  margin-left: auto;
+}
+
+.coming-up {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.small-sub-text {
+  font-size: 0.5em;
+}
+
+.links {
+  text-decoration: none;
+}
