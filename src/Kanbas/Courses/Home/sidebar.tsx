@@ -78,8 +78,13 @@ function SideBar() {
       <a href="#" className="text-danger links">
         Grade A1 - ENV + HTML
         <span className="d-block small-sub-text text-secondary">
-          100 points
-          <FaCircle className="me-2" /> Sep 18 at 11:59 pm
+          100 points - Sep 18 at 11:59 pm
+        </span>
+      </a>
+      <a href="#" className="text-danger links">
+        Grade A2 - CSS
+        <span className="d-block small-sub-text text-secondary">
+          100 points - Sep 27 at 11:59 pm
         </span>
       </a>
 
@@ -103,12 +108,12 @@ function SideBar() {
 
       <hr />
 
-      <ul className="list-group">
+      <ul className="list-group" style={{ listStyleType: "none", padding: 0 }}>
         <li>
           <a href="#" className="text-danger links">
             Lecture
             <span className="d-block small-sub-text text-secondary">
-              <i className="fa-regular fa-calendar"></i>
+              <FaCalendar className="me-2" />
               CS4550.12631.202410 Sep 7 at 11:45 am
             </span>
           </a>
@@ -117,7 +122,7 @@ function SideBar() {
           <a href="#" className="text-danger links">
             Lecture
             <span className="d-block small-sub-text text-secondary">
-              <i className="fa-regular fa-calendar"></i>
+              <FaCalendar className="me-2" />
               CS3200.3930.0002 Sep 10 at 3:25 pm
             </span>
           </a>
@@ -126,7 +131,7 @@ function SideBar() {
           <a href="#" className="text-danger links">
             Lecture
             <span className="d-block small-sub-text text-secondary">
-              <i className="fa-regular fa-calendar"></i>
+              <FaCalendar className="me-2" />
               CS3940.3294320.32 Sep 12 at 9:15 am
             </span>
           </a>
