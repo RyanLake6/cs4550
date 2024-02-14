@@ -2,6 +2,7 @@ import React from "react";
 import { FaCheckCircle, FaEllipsisV, FaPlusCircle } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
 import { assignments } from "../../Database";
+import "./index.css";
 function Assignments() {
   const { courseId } = useParams();
   const assignmentList = assignments.filter(
@@ -10,6 +11,16 @@ function Assignments() {
   return (
     <>
       {/* {<!-- Add buttons and other fields here -->} */}
+      <input placeholder="Search for Assignments" />
+      <button>+ Group</button>
+      <button className="red-button">+ Assignment</button>
+      <select>
+        <option>Edit Assignment Date</option>
+        <option>Assignment Group Weights</option>
+        <option>Gradescope 1.3</option>
+        <option>Common Favorites</option>
+      </select>
+      <hr />
       <ul className="list-group wd-modules">
         <li className="list-group-item">
           <div>
@@ -25,6 +36,7 @@ function Assignments() {
               <li className="list-group-item">
                 <FaEllipsisV className="me-2" />
                 <Link
+                  className="text-danger links"
                   to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
                 >
                   {assignment.title}

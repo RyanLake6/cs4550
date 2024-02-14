@@ -1,0 +1,9 @@
+.red-button {
+  color: white;
+  background-color: rgb(163, 16, 16);
+  border: 1px solid rgb(163, 16, 16);
+}
+
+.links {
+  text-decoration: none;
+}
