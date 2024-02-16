@@ -9,18 +9,18 @@
   },
   {
     "_id": "RS102",
-    "name": "Theory of Computation",
-    "number": "CS3800",
-    "startDate": "2023-01-10",
-    "endDate": "2023-05-15",
-    "image": "theory.png"
-  },
-  {
-    "_id": "RS103",
     "name": "Programming Languages",
     "number": "CS4400",
     "startDate": "2023-01-10",
     "endDate": "2023-05-15",
     "image": "pl.png"
+  },
+  {
+    "_id": "RS103",
+    "name": "Theory of Computation",
+    "number": "Cs3800",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "image": "theory.png"
   }
 ]
