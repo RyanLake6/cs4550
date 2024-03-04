@@ -9,7 +9,7 @@ import TodoList from "./todos/TodoList";
 
 function Assignment3() {
   return (
-    <div className="container">
+    <div className="">
       <h1>Assignment 3</h1>
       <TodoList />
       <Add a={3} b={4} />
