@@ -2,6 +2,7 @@
   {
     "_id": "RS101",
     "name": "Database Design",
+    "subtitle": "Understanding SQL",
     "number": "CS3200",
     "startDate": "2023-01-10",
     "endDate": "2023-05-15",
@@ -10,6 +11,7 @@
   {
     "_id": "RS102",
     "name": "Programming Languages",
+    "subtitle": "Building our own Language",
     "number": "CS4400",
     "startDate": "2023-01-10",
     "endDate": "2023-05-15",
@@ -18,6 +20,7 @@
   {
     "_id": "RS103",
     "name": "Theory of Computation",
+    "subtitle": "Turing Machines!",
     "number": "Cs3800",
     "startDate": "2023-01-10",
     "endDate": "2023-05-15",
