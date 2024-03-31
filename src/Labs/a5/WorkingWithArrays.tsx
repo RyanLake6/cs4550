@@ -40,6 +40,18 @@ function WorkingWithArrays() {
     const response = await axios.get(`${API}/${todo.id}/title/${todo.title}`);
     setTodos(response.data);
   };
+  const postTodo = async () => {
+    const response = await axios.post(API, todo);
+    setTodos([...todos, response.data]);
+  };
+  const deleteTodo = async (todo: { id: number }) => {
+    const response = await axios.delete(`${API}/${todo.id}`);
+    setTodos(todos.filter((t) => t.id !== todo.id));
+  };
+  const updateTodo = async () => {
+    const response = await axios.put(`${API}/${todo.id}`, todo);
+    setTodos(todos.map((t) => (t.id === todo.id ? todo : t)));
+  };
 
   return (
     <div>
@@ -144,20 +156,65 @@ function WorkingWithArrays() {
       <button className="btn btn-primary" onClick={createTodo}>
         Create Todo
       </button>
+      <br />
       <button className="btn btn-success" onClick={updateTitle}>
         Update Title
       </button>
+      <br />
+      <button className="btn btn-warning" onClick={updateTodo}>
+        Update Todo
+      </button>
+      <br />
+      <textarea
+        value={todo.description}
+        onChange={(e) => setTodo({ ...todo, description: e.target.value })}
+      />
+      <br />
+      <input
+        value={todo.due}
+        type="date"
+        onChange={(e) =>
+          setTodo({
+            ...todo,
+            due: e.target.value,
+          })
+        }
+      />
+      <br />
+      <label>
+        <input
+          checked={todo.completed}
+          type="checkbox"
+          onChange={(e) =>
+            setTodo({
+              ...todo,
+              completed: e.target.checked,
+            })
+          }
+        />
+        Completed
+      </label>
+      <br />
+      <button className="btn btn-warning" onClick={postTodo}>
+        {" "}
+        Post Todo{" "}
+      </button>
+      <br />
       <ul>
         {todos.map((todo) => (
           <li key={todo.id} className="list-group-item">
+            <input checked={todo.completed} type="checkbox" readOnly />
+            {todo.title}
+            <p>{todo.description}</p>
+            <p>{todo.due}</p>
             <button
               className="btn btn-warning"
               onClick={() => fetchTodoById(todo.id)}
             >
               Edit
             </button>
-            <button className="btn btn-danger" onClick={() => removeTodo(todo)}>
-              Remove
+            <button onClick={() => deleteTodo(todo)} className="btn btn-danger">
+              Delete
             </button>
             {todo.title}
           </li>
