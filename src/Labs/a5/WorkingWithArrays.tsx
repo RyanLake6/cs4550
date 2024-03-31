@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 function WorkingWithArrays() {
   const API = "http://localhost:4000/a5/todos";
   const [todo, setTodo] = useState({
@@ -9,6 +9,37 @@ function WorkingWithArrays() {
     due: "2021-09-09",
     completed: false,
   });
+  interface Todo {
+    id: number;
+    title: string;
+    description: string;
+    due: string;
+    completed: boolean;
+  }
+  const [todos, setTodos] = useState<Todo[]>([]);
+  const fetchTodos = async () => {
+    const response = await axios.get(API);
+    setTodos(response.data);
+  };
+  useEffect(() => {
+    fetchTodos();
+  }, []);
+  const removeTodo = async (todo: { id: any }) => {
+    const response = await axios.get(`${API}/${todo.id}/delete`);
+    setTodos(response.data);
+  };
+  const createTodo = async () => {
+    const response = await axios.get(`${API}/create`);
+    setTodos(response.data);
+  };
+  const fetchTodoById = async (id: any) => {
+    const response = await axios.get(`${API}/${id}`);
+    setTodo(response.data);
+  };
+  const updateTitle = async () => {
+    const response = await axios.get(`${API}/${todo.id}/title/${todo.title}`);
+    setTodos(response.data);
+  };
 
   return (
     <div>
@@ -99,6 +130,39 @@ function WorkingWithArrays() {
         onChange={(e) => setTodo({ ...todo, description: e.target.value })}
         value={todo.description}
       />
+      <br />
+
+      <input
+        value={todo.id}
+        onChange={(e) => setTodo({ ...todo, id: Number(e.target.value) })}
+      />
+      <input
+        value={todo.title}
+        onChange={(e) => setTodo({ ...todo, title: e.target.value })}
+      />
+      <br />
+      <button className="btn btn-primary" onClick={createTodo}>
+        Create Todo
+      </button>
+      <button className="btn btn-success" onClick={updateTitle}>
+        Update Title
+      </button>
+      <ul>
+        {todos.map((todo) => (
+          <li key={todo.id} className="list-group-item">
+            <button
+              className="btn btn-warning"
+              onClick={() => fetchTodoById(todo.id)}
+            >
+              Edit
+            </button>
+            <button className="btn btn-danger" onClick={() => removeTodo(todo)}>
+              Remove
+            </button>
+            {todo.title}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
