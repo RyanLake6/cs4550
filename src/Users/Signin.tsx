@@ -14,21 +14,34 @@ export default function Signin() {
   });
   const navigate = useNavigate();
   const signin = async () => {
-    await client.signin(credentials);
-    navigate("/Kanbas/Account/Profile");
+    try {
+      await client.signin(credentials);
+      navigate("/Kanbas/Account/Profile");
+    } catch (err: any) {
+      let errorMessage =
+        "An error occured: Username or Password is incorrect. Please try again.";
+      setError(errorMessage);
+    }
   };
   const signup = async () => {
     try {
       await client.signup(credentials);
       navigate("/Kanbas/Account/Profile");
     } catch (err: any) {
-      let errorMessage = "An unexpected error occurred. Please try again.";
-
+      let errorMessage =
+        "An error occurred: This Username already exists. Please try again.";
       setError(errorMessage);
     }
   };
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "5px",
+        maxWidth: "300px",
+      }}
+    >
       {error && <div>{error}</div>}
       <h1>Signin</h1>
       <input
@@ -37,14 +50,22 @@ export default function Signin() {
           setCredentials({ ...credentials, username: e.target.value })
         }
       />
+      <br />
       <input
         value={credentials.password}
         onChange={(e) =>
           setCredentials({ ...credentials, password: e.target.value })
         }
       />
-      <button onClick={signin}> Signin </button>
-      <button onClick={signup}> Signup</button>
+      <br />
+      <div style={{ display: "flex", gap: "10px" }}>
+        <button className="btn btn-primary" onClick={signin}>
+          Signin
+        </button>
+        <button className="btn btn-warning" onClick={signup}>
+          Signup
+        </button>
+      </div>
     </div>
   );
 }
